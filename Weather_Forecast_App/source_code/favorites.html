@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>WeatherNow | Favorites</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+
+<body>
+
+
+
+<!-- NAVBAR -->
+
+
+<header>
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+WeatherNow
+
+</div>
+
+
+
+
+<ul class="nav-links">
+
+
+<li>
+
+<a href="index.html">
+
+Home
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="weather.html">
+
+Weather
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="forecast.html">
+
+Forecast
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="favorites.html" class="active">
+
+Favorites
+
+</a>
+
+</li>
+
+
+
+
+<li>
+
+<a href="about.html">
+
+About
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+
+
+<!-- FAVORITES SECTION -->
+
+
+<section class="favorites-section">
+
+
+<h1>
+
+Favorite Cities
+
+</h1>
+
+
+
+<p>
+
+Save your frequently checked cities here.
+
+</p>
+
+
+
+
+
+<!-- ADD CITY -->
+
+
+<div class="favorite-input">
+
+
+<input type="text"
+id="favoriteCity"
+placeholder="Enter City Name">
+
+
+
+<button onclick="addFavorite()">
+
+
+<i class="fa-solid fa-heart"></i>
+
+
+Add City
+
+
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- CITY LIST -->
+
+
+<div class="favorites-container" id="favoritesContainer">
+
+
+<div class="favorite-card">
+
+
+<i class="fa-solid fa-city"></i>
+
+
+<h2>
+
+Hyderabad
+
+</h2>
+
+
+<p>
+
+Click to view weather
+
+</p>
+
+
+
+<button>
+
+Remove
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+<!-- RECENT SEARCHES -->
+
+
+<section class="recent-section">
+
+
+<h2>
+
+Recent Searches
+
+</h2>
+
+
+
+
+<div class="recent-container">
+
+
+
+
+
+<div class="recent-card">
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+<h3>
+
+Hyderabad
+
+</h3>
+
+
+<p>
+
+Recently searched
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="recent-card">
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+<h3>
+
+Bangalore
+
+</h3>
+
+
+<p>
+
+Recently searched
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="recent-card">
+
+
+<i class="fa-solid fa-clock"></i>
+
+
+<h3>
+
+Chennai
+
+</h3>
+
+
+<p>
+
+Recently searched
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!-- FAVORITE INFORMATION -->
+
+
+<section class="favorite-info">
+
+
+<h2>
+
+Manage Favorites
+
+</h2>
+
+
+
+
+
+<div class="info-container">
+
+
+
+
+
+<div class="info-card">
+
+
+<i class="fa-solid fa-plus"></i>
+
+
+<h3>
+
+Add Cities
+
+</h3>
+
+
+<p>
+
+Add your favorite locations
+for quick weather access.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info-card">
+
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+
+<h3>
+
+Quick Weather
+
+</h3>
+
+
+<p>
+
+Check weather updates
+of saved cities easily.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="info-card">
+
+
+<i class="fa-solid fa-trash"></i>
+
+
+<h3>
+
+Remove Cities
+
+</h3>
+
+
+<p>
+
+Delete cities that you
+don't need anymore.
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+</section>
+<!-- FAVORITE STATISTICS -->
+
+
+<section class="favorite-stats">
+
+
+<h2>
+
+Favorite Statistics
+
+</h2>
+
+
+
+
+<div class="stats-container">
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa-solid fa-city"></i>
+
+
+<h3>
+
+Saved Cities
+
+</h3>
+
+
+<p id="totalCities">
+
+1
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa-solid fa-heart"></i>
+
+
+<h3>
+
+Favorites
+
+</h3>
+
+
+<p>
+
+Active
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="stat-card">
+
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+
+<h3>
+
+Weather Updates
+
+</h3>
+
+
+<p>
+
+Live
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- FOOTER -->
+
+
+<footer>
+
+
+
+<div class="footer-container">
+
+
+
+
+
+<div class="footer-about">
+
+
+<h2>
+
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+
+WeatherNow
+
+
+</h2>
+
+
+
+<p>
+
+Track your favorite cities and
+get weather updates quickly.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer-links">
+
+
+<h3>
+
+Quick Links
+
+</h3>
+
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+
+
+<li>
+<a href="weather.html">
+Weather
+</a>
+</li>
+
+
+
+<li>
+<a href="forecast.html">
+Forecast
+</a>
+</li>
+
+
+
+<li>
+<a href="favorites.html">
+Favorites
+</a>
+</li>
+
+
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footer-contact">
+
+
+<h3>
+
+Contact
+
+</h3>
+
+
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+weathernow@gmail.com
+
+</p>
+
+
+
+
+<p>
+
+<i class="fa-solid fa-phone"></i>
+
++91 9876543210
+
+</p>
+
+
+
+
+<p>
+
+<i class="fa-solid fa-location-dot"></i>
+
+India
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<hr>
+
+
+
+
+
+<p class="copyright">
+
+
+© 2026 WeatherNow | All Rights Reserved
+
+
+</p>
+
+
+
+</footer>
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+
+
+</html>

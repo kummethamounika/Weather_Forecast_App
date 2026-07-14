@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>WeatherNow | Forecast</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
+
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+
+<header>
+
+<nav class="navbar">
+
+
+<div class="logo">
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+WeatherNow
+
+</div>
+
+
+
+<ul class="nav-links">
+
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+
+
+<li>
+<a href="weather.html">
+Weather
+</a>
+</li>
+
+
+
+<li>
+<a href="forecast.html" class="active">
+Forecast
+</a>
+</li>
+
+
+
+<li>
+<a href="favorites.html">
+Favorites
+</a>
+</li>
+
+
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+
+
+</ul>
+
+
+</nav>
+
+</header>
+
+
+
+
+
+<!-- FORECAST SECTION -->
+
+
+<section class="forecast-section">
+
+
+<h1>
+
+5 Day Weather Forecast
+
+</h1>
+
+
+
+<!-- SEARCH -->
+
+
+<div class="search-box">
+
+
+<input type="text"
+id="forecastCity"
+placeholder="Enter City Name">
+
+
+
+<button onclick="getForecast()">
+
+
+<i class="fa-solid fa-search"></i>
+
+
+Search
+
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- FORECAST CARDS -->
+
+
+<div class="forecast-container">
+
+
+
+<div class="forecast-card">
+
+
+<h3>
+
+Monday
+
+</h3>
+
+
+<i class="fa-solid fa-sun"></i>
+
+
+<h2>
+
+30°C
+
+</h2>
+
+
+<p>
+
+Sunny
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="forecast-card">
+
+
+<h3>
+
+Tuesday
+
+</h3>
+
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+
+<h2>
+
+28°C
+
+</h2>
+
+
+<p>
+
+Partly Cloudy
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="forecast-card">
+
+
+<h3>
+
+Wednesday
+
+</h3>
+
+
+<i class="fa-solid fa-cloud-rain"></i>
+
+
+<h2>
+
+26°C
+
+</h2>
+
+
+<p>
+
+Rainy
+
+</p>
+
+
+</div>
+<div class="forecast-card">
+
+
+<h3>
+
+Thursday
+
+</h3>
+
+
+<i class="fa-solid fa-cloud-bolt"></i>
+
+
+<h2>
+
+27°C
+
+</h2>
+
+
+<p>
+
+Thunderstorm
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="forecast-card">
+
+
+<h3>
+
+Friday
+
+</h3>
+
+
+<i class="fa-solid fa-sun"></i>
+
+
+<h2>
+
+31°C
+
+</h2>
+
+
+<p>
+
+Clear Sky
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- FORECAST DETAILS -->
+
+
+<section class="forecast-details">
+
+
+<h2>
+
+Weekly Weather Summary
+
+</h2>
+
+
+
+<div class="summary-container">
+
+
+
+
+
+<div class="summary-card">
+
+
+<i class="fa-solid fa-temperature-high"></i>
+
+
+<h3>
+
+Average Temperature
+
+</h3>
+
+
+<p>
+
+29°C
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="summary-card">
+
+
+<i class="fa-solid fa-droplet"></i>
+
+
+<h3>
+
+Humidity
+
+</h3>
+
+
+<p>
+
+65%
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="summary-card">
+
+
+<i class="fa-solid fa-wind"></i>
+
+
+<h3>
+
+Wind Speed
+
+</h3>
+
+
+<p>
+
+15 km/h
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="summary-card">
+
+
+<i class="fa-solid fa-gauge-high"></i>
+
+
+<h3>
+
+Pressure
+
+</h3>
+
+
+<p>
+
+1014 hPa
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- WEATHER ADVICE -->
+
+
+<section class="weather-tips">
+
+
+<h2>
+
+Weather Advice
+
+</h2>
+
+
+
+<div class="tips-container">
+
+
+
+
+
+<div class="tip-card">
+
+
+<i class="fa-solid fa-sun"></i>
+
+
+<h3>
+
+Hot Weather
+
+</h3>
+
+
+<p>
+
+Drink water frequently and avoid
+direct sunlight.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="tip-card">
+
+
+<i class="fa-solid fa-cloud-rain"></i>
+
+
+<h3>
+
+Rainy Weather
+
+</h3>
+
+
+<p>
+
+Carry an umbrella before going outside.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="tip-card">
+
+
+<i class="fa-solid fa-shirt"></i>
+
+
+<h3>
+
+Clothing
+
+</h3>
+
+
+<p>
+
+Choose clothes according to weather
+conditions.
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+</section>
+<!-- FOOTER -->
+
+
+<footer>
+
+
+<div class="footer-container">
+
+
+
+<div class="footer-about">
+
+
+<h2>
+
+<i class="fa-solid fa-cloud-sun"></i>
+
+WeatherNow
+
+</h2>
+
+
+
+<p>
+
+Your smart weather forecasting
+application for daily updates.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="footer-links">
+
+
+<h3>
+
+Quick Links
+
+</h3>
+
+
+<ul>
+
+
+<li>
+<a href="index.html">
+Home
+</a>
+</li>
+
+
+
+<li>
+<a href="weather.html">
+Weather
+</a>
+</li>
+
+
+
+<li>
+<a href="forecast.html">
+Forecast
+</a>
+</li>
+
+
+
+<li>
+<a href="favorites.html">
+Favorites
+</a>
+</li>
+
+
+
+<li>
+<a href="about.html">
+About
+</a>
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+<div class="footer-contact">
+
+
+<h3>
+
+Contact
+
+</h3>
+
+
+
+<p>
+
+<i class="fa-solid fa-envelope"></i>
+
+weathernow@gmail.com
+
+</p>
+
+
+
+
+<p>
+
+<i class="fa-solid fa-phone"></i>
+
++91 9876543210
+
+</p>
+
+
+
+
+<p>
+
+<i class="fa-solid fa-location-dot"></i>
+
+India
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+<hr>
+
+
+
+
+
+<p class="copyright">
+
+
+© 2026 WeatherNow | All Rights Reserved
+
+
+</p>
+
+
+
+
+</footer>
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+
+
+</body>
+
+
+</html>
