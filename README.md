@@ -12,7 +12,7 @@ Internship Period:06 June 2026 - 18 July 2026
 
 Intern ID:CITS2257
 
-Project Name:Weather_Forecast_App
+Project Name:Weather Forecast App
 
 Project Scope
 
@@ -26,4 +26,13 @@ The interface is designed with simplicity and ease of use in mind. Users can qui
 This project demonstrates essential frontend web development concepts including HTML page structure, CSS styling, responsive web design, JavaScript programming, DOM manipulation, event handling, and dynamic content rendering. It serves as a practical example of building a real-world web application that combines functionality with an attractive user interface.
 The Weather Forecast App is suitable for students and beginners who want to strengthen their frontend development skills by creating a useful application. It also showcases the ability to design responsive layouts, manage user input, and display information effectively using web technologies.
 Future enhancements may include automatic location detection, hourly weather forecasts, seven-day weather predictions, weather notifications, favorite city management, dark mode support, interactive weather charts, air quality information, UV index display, and multilingual support. These additional features would improve the application's usability and provide a more comprehensive weather forecasting experience.
+
+
+<img width="1343" height="632" alt="Image" src="https://github.com/user-attachments/assets/a09c4df1-0b60-4f3c-ac17-e333025882c9" />
+
+<img width="1327" height="634" alt="Image" src="https://github.com/user-attachments/assets/fa1291e4-567d-4bb5-a86e-514b7db32ade" />
+
+<img width="1341" height="619" alt="Image" src="https://github.com/user-attachments/assets/ff694b87-eee5-4761-996e-73ebf3826334" />
+
+<img width="1328" height="631" alt="Image" src="https://github.com/user-attachments/assets/d3423dbb-087e-4ae1-afc3-41a9c870a040" />
 
